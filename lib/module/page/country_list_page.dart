@@ -114,12 +114,12 @@ class _CountryListPageState extends State<CountryListPage> {
   // iOS Style Navigation Bar
   CupertinoSliverNavigationBar _buildNavigationBar(BuildContext context) {
     return CupertinoSliverNavigationBar(
-      trailing: CupertinoButton(
-          onPressed: _dismiss,
-          child: Icon(
-            Icons.close,
-            color: Colors.black,
-          )),
+      // trailing: CupertinoButton(
+      //     onPressed: _dismiss,
+      //     child: Icon(
+      //       Icons.close,
+      //       color: Colors.black,
+      //     )),
       automaticallyImplyLeading: false,
       largeTitle: Text(
         country.i18n,
@@ -172,7 +172,7 @@ extension ListViewCells on _CountryListPageState {
       child: InkWell(
         onTap: () {
           widget.didSelectCountry(country);
-          this._dismiss();
+          // this._dismiss();
         },
         child: Container(
           height: 90,

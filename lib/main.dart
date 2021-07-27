@@ -1,5 +1,3 @@
-import 'package:country_picker/locale/locale.dart';
-import 'package:country_picker/module/model/country/country.dart';
 import 'package:country_picker/module/page/country_list_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       localizationsDelegates: [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: I18n(child: HomePage()),
+      home: I18n(child: CountryListPage(didSelectCountry: (country) {})),
     );
   }
 }
